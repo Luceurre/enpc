@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if sections %}
+    <ul>
+    {% for section in sections %}
+        <li><a href={{ section.url }}>{{ section.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No sections are available.</p>
+{% endif %}
+</body>
+</html>
